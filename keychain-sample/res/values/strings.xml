@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SampleSimpleClientCertificateApp</string>
+    <string name="menu_settings">Settings</string>
+    <string name="install">Install certificate</string>
+    <string name="use_certificate">Use certificate</string>
+    <string name="use_alias">Use certificate %s</string>
+    <string name="choose">Choose certificate</string>
+    <string name="connection_ok">Mutual authentification OK</string>
+    <string name="connection_fail">Mutual authentification or connection FAIL</string>
+    <string name="help_install">Install a client certificate form the assets of the application. This certificate can be later used to authenticate users. The password is \'tomcat\'.</string>
+    <string name="help_choose">Ask user to choose a client certificate to use. The application will have access to the private key of this selected certificate.</string>
+    <string name="help_use">Use the selected certificate to initiate a TLS communication with mutual authentification.</string>
+    <!--  HOME -->
+<!-- 	<string name="host">192.168.0.30:8443</string> -->
+	<!--  WORK -->
+	<!--     <string name="host">10.42.6.246:8443</string> -->
+	<!--  EMULATOR -->
+    <string name="host">10.0.2.2:8443</string>
+    
+</resources>

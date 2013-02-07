@@ -1,0 +1,3 @@
+[submodule "keychain-backport"]
+	path = keychain-backport
+	url = git://github.com/pprados/android-keychain-backport-androlib.git

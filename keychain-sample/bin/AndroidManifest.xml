@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.samplesimpleclientcertificateapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.samplesimpleclientcertificateapp.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity to install a certificat after enter the password. -->
+        <activity
+            android:name="android.support.v7.security.impl.CertInstaller"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/KeyChain_Transparent"
+            />
+        <!-- Activity to select a certificate to use -->
+        <activity android:name="android.support.v7.security.impl.CertChooser" 
+            android:theme="@style/KeyChain_Transparent"
+            android:configChanges="orientation|keyboardHidden"/>
+        <!-- Activity to unlock the local container. Do nothing. -->
+        <activity android:name="android.support.v7.security.impl.UnlockActivity" />
+    </application>
+
+</manifest>
