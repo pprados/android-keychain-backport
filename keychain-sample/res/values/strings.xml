@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">SampleSimpleClientCertificateApp</string>
+    <string name="app_name">KeyChain Sample</string>
     <string name="menu_settings">Settings</string>
     <string name="install">Install certificate</string>
     <string name="use_certificate">Use certificate</string>

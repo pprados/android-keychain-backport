@@ -1,5 +1,6 @@
 /keychain-sample/bin/*
 /keychain-sample/gen/*
+/keychain-sample/target/*
 /proguard
 /assets/*.jar
 .codepro/*

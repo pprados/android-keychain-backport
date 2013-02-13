@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>fr.prados.android.keychain.backport</groupId>
+    <artifactId>android-keychain-backport-sample</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>apk</packaging>
+    <name>android-keychain-backport</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>4.1.1.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+  			<groupId>com.google.android</groupId>
+  			<artifactId>support-v4</artifactId>
+  			<version>r7</version>
+		</dependency>
+        <dependency>
+            <groupId>fr.prados.android.keychain.backport</groupId>
+            <artifactId>android-keychain-backport</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <type>apklib</type>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <sourceDirectory>src</sourceDirectory>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <version>3.5.0</version>
+                    <extensions>true</extensions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <configuration>
+                    <run>
+                        <debug>true</debug>
+                    </run>
+                    <sdk>
+                        <platform>16</platform>
+                    </sdk>
+                    <emulator>
+                        <avd>16</avd>
+                    </emulator>
+                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <description>Compatibility library for manager client certificate.
+
+Propose a class to simulate the KeyChain (API Level 14) in other versions.</description>
+    <url>https://github.com/pprados/android-keychain-backport</url>
+    <organization>
+    	<name>Octo</name>
+    	<url>http://www.octo.com</url>
+    </organization>
+</project>
